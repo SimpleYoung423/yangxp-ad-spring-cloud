@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: ad-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:4396/eureka/
+  instance:
+    instance-id: ad-gateway-80
+    prefer-ip-address: true

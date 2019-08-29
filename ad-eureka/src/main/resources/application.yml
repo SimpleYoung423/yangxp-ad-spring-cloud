@@ -1,0 +1,64 @@
+server:
+  port: 4396
+
+spring:
+  application:
+    name: ad-eureka
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+##==============server1=================#
+#---
+#server:
+#  port: 4396
+#spring:
+#  profiles: eureka-server1
+#  application:
+#    name: ad-eureka
+#eureka:
+#  instance:
+#    hostname: eureka-server1
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://eureka-server2:4397/eureka,http://eureka-server3:4398/eureka
+#
+##==============server2=================#
+#---
+#server:
+#  port: 4397
+#spring:
+#  profiles: eureka-server2
+#  application:
+#    name: ad-eureka
+#eureka:
+#  instance:
+#    hostname: eureka-server2
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://eureka-server1:4396/eureka,http://eureka-server3:4398/eureka
+#
+##==============server3=================#
+#---
+#server:
+#  port: 4398
+#spring:
+#  profiles: eureka-server3
+#  application:
+#    name: ad-eureka
+#eureka:
+#  instance:
+#    hostname: eureka-server3
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://eureka-server1:4396/eureka,http://eureka-server2:4397/eureka
