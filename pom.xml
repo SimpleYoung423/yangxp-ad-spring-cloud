@@ -83,6 +83,24 @@
             </snapshots>
         </repository>
 
+        <repository>
+
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+
+        <repository>
+            <id>repository-central</id>
+            <name>public Repository</name>
+            <url>http://nexus.deepexi.top/repository/maven-public/</url>
+        </repository>
+
+
     </repositories>
 
 
