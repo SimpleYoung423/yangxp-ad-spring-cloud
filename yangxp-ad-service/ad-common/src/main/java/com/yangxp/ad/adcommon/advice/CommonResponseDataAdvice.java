@@ -45,13 +45,13 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
 
         CommonResponse<Object> response = new CommonResponse<>(0, "");
 
-        if (ObjectUtil.isNull(o)){
+        if (ObjectUtil.isNull(o)) {
             return response;
         }
         if (o instanceof CommonResponse) {
 
             response = (CommonResponse<Object>) o;
-        }else {
+        } else {
             response.setData(o);
         }
         return response;

@@ -25,10 +25,10 @@ public class CreativeUnit {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "creative_id",nullable = false)
+    @Column(name = "creative_id", nullable = false)
     private Long creativeId;
 
-    @Column(name = "unit_id",nullable = false)
+    @Column(name = "unit_id", nullable = false)
     private Long unitId;
 
     public CreativeUnit(Long creativeId, Long unitId) {

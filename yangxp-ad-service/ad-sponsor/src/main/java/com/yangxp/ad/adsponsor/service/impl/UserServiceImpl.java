@@ -37,21 +37,21 @@ public class UserServiceImpl implements IUserService {
     @Transactional
     public CreateUserResponse createUser(CreateUserRequest createUserRequest) throws AdException {
 
-        if (!createUserRequest.validate()){
+        if (!createUserRequest.validate()) {
 
-            throw new  AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
+            throw new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
         }
 
         String username = createUserRequest.getUsername();
 
         AdUser oldUser = userRepository.findByUsername(username);
 
-        if (ObjectUtil.isNotEmpty(oldUser)){
+        if (ObjectUtil.isNotEmpty(oldUser)) {
 
             throw new AdException(Constants.ErrorMsg.SAME_NAME_ERROR);
         }
 
         AdUser newUser = userRepository.save(new AdUser(username, SecureUtil.md5(username)));
-        return new CreateUserResponse(newUser.getId(), newUser.getUsername(),newUser.getToken(),newUser.getCreateTime(),newUser.getUpdateTime());
+        return new CreateUserResponse(newUser.getId(), newUser.getUsername(), newUser.getToken(), newUser.getCreateTime(), newUser.getUpdateTime());
     }
 }

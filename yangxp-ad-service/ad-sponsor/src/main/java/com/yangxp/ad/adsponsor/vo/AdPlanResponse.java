@@ -21,7 +21,5 @@ public class AdPlanResponse {
     private Long id;
     private String planName;
 
-    
-
 
 }

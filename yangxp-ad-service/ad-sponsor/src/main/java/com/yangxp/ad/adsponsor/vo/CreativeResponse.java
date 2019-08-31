@@ -4,20 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 /**
- * {@link AdUnitItResponse}
+ * {@link CreativeResponse}
  *
  * @Description: TODO
  * @Author: yangxp
- * @Date: 2019/8/30 19:47
+ * @Date: 2019/8/31 14:24
  * @Version 1.0
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdUnitItResponse {
+public class CreativeResponse {
 
-    private List<Long> ids;
+    private Long id;
+    private String name;
+
 }

@@ -42,10 +42,10 @@ public class AdPlan {
     @Column(name = "end_time", nullable = false)
     private Date endTime;
 
-    @Column(name = "create_time",nullable = false)
+    @Column(name = "create_time", nullable = false)
     private Date createTime;
 
-    @Column(name = "update_time",nullable = false)
+    @Column(name = "update_time", nullable = false)
     private Date updateTime;
 
 

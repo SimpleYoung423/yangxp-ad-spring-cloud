@@ -25,10 +25,10 @@ public class AdUnitIt {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "unit_id",nullable = false)
+    @Column(name = "unit_id", nullable = false)
     private Long unitId;
 
-    @Column(name = "it_tag",nullable = false)
+    @Column(name = "it_tag", nullable = false)
     private String itTag;
 
     public AdUnitIt(Long unitId, String itTag) {

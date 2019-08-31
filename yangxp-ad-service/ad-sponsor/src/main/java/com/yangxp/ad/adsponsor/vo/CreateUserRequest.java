@@ -20,7 +20,7 @@ public class CreateUserRequest {
 
     private String username;
 
-    public   boolean validate(){
+    public boolean validate() {
         return !StrUtil.isEmpty(this.username);
     }
 

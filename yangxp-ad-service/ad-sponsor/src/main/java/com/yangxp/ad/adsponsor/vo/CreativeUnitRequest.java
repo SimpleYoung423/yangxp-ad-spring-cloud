@@ -7,30 +7,29 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * {@link AdUnitKeywordRequest}
+ * {@link CreativeUnitRequest}
  *
  * @Description: TODO
  * @Author: yangxp
- * @Date: 2019/8/30 19:36
+ * @Date: 2019/8/31 15:38
  * @Version 1.0
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+public class CreativeUnitRequest {
 
-public class AdUnitKeywordRequest {
+    private List<CreativeUnitItem> unitItems;
 
-    private List<UnitKeyword> unitKeywords;
 
     @Data
-    @NoArgsConstructor
     @AllArgsConstructor
-    public static class UnitKeyword {
+    @NoArgsConstructor
+    public static class CreativeUnitItem {
 
+        private Long creativeId;
         private Long unitId;
-        private String keyword;
 
     }
-
 
 }

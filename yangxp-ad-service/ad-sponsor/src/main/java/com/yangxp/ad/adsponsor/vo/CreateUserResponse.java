@@ -27,6 +27,4 @@ public class CreateUserResponse {
     private Date updateTime;
 
 
-
-
 }

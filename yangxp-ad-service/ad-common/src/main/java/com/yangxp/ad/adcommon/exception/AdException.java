@@ -9,7 +9,7 @@ package com.yangxp.ad.adcommon.exception;
  */
 public class AdException extends Exception {
 
-    public AdException(String message){
+    public AdException(String message) {
         super(message);
     }
 

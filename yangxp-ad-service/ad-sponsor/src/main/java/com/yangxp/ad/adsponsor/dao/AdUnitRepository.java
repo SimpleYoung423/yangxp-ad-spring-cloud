@@ -14,9 +14,9 @@ import java.util.List;
  * @Version 1.0
  */
 
-public interface AdUnitRepository extends JpaRepository<AdUnit,Long> {
+public interface AdUnitRepository extends JpaRepository<AdUnit, Long> {
 
-    AdUnit findByPlanIdAndUnitName(Long planId,String unitName);
+    AdUnit findByPlanIdAndUnitName(Long planId, String unitName);
 
     List<AdUnit> findAllByUnitStatus(Integer status);
 

@@ -16,11 +16,11 @@ import com.yangxp.ad.adsponsor.vo.CreateUserResponse;
 public interface IUserService {
 
     /**
+     * @return {@link CreateUserResponse}
      * @Description <h2>创建用户</h2>
      * @Author yangxp
-     * @Date  2019/8/30 17:54
+     * @Date 2019/8/30 17:54
      * @Param [createUserRequest]
-     * @return {@link CreateUserResponse}
      **/
     CreateUserResponse createUser(CreateUserRequest createUserRequest) throws AdException;
 

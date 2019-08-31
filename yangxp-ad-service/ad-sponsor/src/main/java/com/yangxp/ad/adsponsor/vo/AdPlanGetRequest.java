@@ -27,12 +27,10 @@ public class AdPlanGetRequest {
 
     private List<Long> ids;
 
-    public boolean validate(){
+    public boolean validate() {
 
         return ObjectUtil.isNotNull(userId) && CollectionUtil.isNotEmpty(ids);
     }
-
-
 
 
 }

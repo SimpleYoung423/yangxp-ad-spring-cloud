@@ -20,38 +20,38 @@ import java.util.List;
 public interface IAdPlanService {
 
     /**
+     * @return {@link AdPlanResponse}
      * @Description 创建推广计划
      * @Author yangxp
-     * @Date  2019/8/30 18:33
+     * @Date 2019/8/30 18:33
      * @Param [request]
-     * @return {@link AdPlanResponse}
      **/
     AdPlanResponse createAdPlan(AdPlanRequest request) throws AdException;
 
     /**
+     * @return {@link List< AdPlan>}
      * @Description 根据IDS获取推广计划
      * @Author yangxp
-     * @Date  2019/8/30 18:34
+     * @Date 2019/8/30 18:34
      * @Param [getRequest]
-     * @return {@link List< AdPlan>}
      **/
     List<AdPlan> getAdPlansByIds(AdPlanGetRequest getRequest) throws AdException;
 
     /**
+     * @return {@link AdPlanResponse}
      * @Description 更新推广计划
      * @Author yangxp
-     * @Date  2019/8/30 18:35
+     * @Date 2019/8/30 18:35
      * @Param [request]
-     * @return {@link AdPlanResponse}
      **/
     AdPlanResponse updateAdPlan(AdPlanRequest request) throws AdException;
 
     /**
+     * @return {@link }
      * @Description 删除推广计划
      * @Author yangxp
-     * @Date  2019/8/30 18:38
+     * @Date 2019/8/30 18:38
      * @Param [request]
-     * @return {@link }
      **/
-    void deleteAdPlan( AdPlanRequest request) throws AdException;
+    void deleteAdPlan(AdPlanRequest request) throws AdException;
 }

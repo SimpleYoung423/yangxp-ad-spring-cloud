@@ -12,5 +12,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Version 1.0
  */
 
-public interface AdUnitItRepository extends JpaRepository<AdUnitIt,Long> {
+public interface AdUnitItRepository extends JpaRepository<AdUnitIt, Long> {
 }

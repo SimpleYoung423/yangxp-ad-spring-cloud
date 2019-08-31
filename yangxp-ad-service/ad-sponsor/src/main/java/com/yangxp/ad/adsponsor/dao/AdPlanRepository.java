@@ -14,18 +14,18 @@ import java.util.List;
  * @Version 1.0
  */
 
-public interface AdPlanRepository extends JpaRepository<AdPlan,Long> {
+public interface AdPlanRepository extends JpaRepository<AdPlan, Long> {
 
     /**
+     * @return {@link AdPlan}
      * @Description 通过ID和userID查找
      * @Author yangxp
-     * @Date  2019/8/30 17:28
+     * @Date 2019/8/30 17:28
      * @Param [id, userId]
-     * @return {@link AdPlan}
      **/
     AdPlan findByIdAndUserId(Long id, Long userId);
 
-    List<AdPlan> findAllByIdInAndUserId(List<Long> ids,Long userId);
+    List<AdPlan> findAllByIdInAndUserId(List<Long> ids, Long userId);
 
     AdPlan findByUserIdAndPlanName(Long userId, String planName);
 

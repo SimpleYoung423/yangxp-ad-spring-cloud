@@ -11,3 +11,11 @@ eureka:
   instance:
     instance-id: ad-gateway-80
     prefer-ip-address: true
+zuul:
+  prefix: /yangxp
+  routes:
+    sponsor:
+      path: /ad-sponsor/**
+      serviceId: eureka-client-ad-sponsor
+  strip-prefix: false
+

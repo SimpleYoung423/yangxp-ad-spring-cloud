@@ -76,12 +76,12 @@ public class AdPlanServiceImpl implements IAdPlanService {
     @Override
     public List<AdPlan> getAdPlansByIds(AdPlanGetRequest getRequest) throws AdException {
 
-        if (!getRequest.validate()){
+        if (!getRequest.validate()) {
 
             throw new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
         }
 
-        return planRepository.findAllByIdInAndUserId(getRequest.getIds(),getRequest.getUserId());
+        return planRepository.findAllByIdInAndUserId(getRequest.getIds(), getRequest.getUserId());
     }
 
 
@@ -89,35 +89,35 @@ public class AdPlanServiceImpl implements IAdPlanService {
     @Transactional
     public AdPlanResponse updateAdPlan(AdPlanRequest request) throws AdException {
 
-        if (!request.updateValidate()){
+        if (!request.updateValidate()) {
 
             throw new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
         }
 
         AdPlan plan = planRepository.findByIdAndUserId(request.getId(), request.getUserId());
 
-        if (ObjectUtil.isNull(plan)){
+        if (ObjectUtil.isNull(plan)) {
 
             throw new AdException(Constants.ErrorMsg.CAN_NOT_FIND_RECORD);
         }
 
-        if (ObjectUtil.isNotNull(request.getPlanName())){
+        if (ObjectUtil.isNotNull(request.getPlanName())) {
 
             plan.setPlanName(request.getPlanName());
         }
-        if (ObjectUtil.isNotNull(request.getStartTime())){
+        if (ObjectUtil.isNotNull(request.getStartTime())) {
 
             plan.setStartTime(DateUtil.parse(request.getStartTime()));
         }
-        if (ObjectUtil.isNotNull(request.getEndTime())){
+        if (ObjectUtil.isNotNull(request.getEndTime())) {
 
             plan.setEndTime(DateUtil.parse(request.getEndTime()));
         }
-        
+
         plan.setUpdateTime(DateUtil.date());
         plan = planRepository.save(plan);
 
-        return new AdPlanResponse(plan.getId(),plan.getPlanName());
+        return new AdPlanResponse(plan.getId(), plan.getPlanName());
     }
 
 
@@ -125,14 +125,14 @@ public class AdPlanServiceImpl implements IAdPlanService {
     @Transactional
     public void deleteAdPlan(AdPlanRequest request) throws AdException {
 
-        if (!request.deleteValidate()){
+        if (!request.deleteValidate()) {
 
-            throw  new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
+            throw new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
         }
 
         AdPlan plan = planRepository.findByIdAndUserId(request.getId(), request.getUserId());
 
-        if (ObjectUtil.isNull(plan)){
+        if (ObjectUtil.isNull(plan)) {
 
             throw new AdException(Constants.ErrorMsg.CAN_NOT_FIND_RECORD);
         }

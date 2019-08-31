@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AdCommonApplicationg {
 
     public static void main(String[] args) {
-        SpringApplication.run(AdCommonApplicationg.class,args);
+        SpringApplication.run(AdCommonApplicationg.class, args);
     }
 
 }

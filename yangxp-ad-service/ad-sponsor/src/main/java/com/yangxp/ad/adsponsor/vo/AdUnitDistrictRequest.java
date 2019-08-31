@@ -23,8 +23,10 @@ public class AdUnitDistrictRequest {
     private List<UnitDistrict> unitDistricts;
 
 
-
-    public static class UnitDistrict{
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class UnitDistrict {
 
         private Long unitId;
         private String province;

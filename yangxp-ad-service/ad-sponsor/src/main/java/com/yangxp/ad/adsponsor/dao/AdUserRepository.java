@@ -14,13 +14,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AdUserRepository extends JpaRepository<AdUser, Long> {
 
-     /**
-      * @Description //TODO
-      * @Author yangxp
-      * @Date  2019/8/30 17:25
-      * @Param [username]
-      * @return {@link AdUser}
-      **/
+    /**
+     * @return {@link AdUser}
+     * @Description //TODO
+     * @Author yangxp
+     * @Date 2019/8/30 17:25
+     * @Param [username]
+     **/
     AdUser findByUsername(String username);
 
 }

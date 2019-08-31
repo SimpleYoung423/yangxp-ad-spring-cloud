@@ -26,13 +26,13 @@ public class AdUnitDistrict {
     private Long id;
 
 
-    @Column(name = "unit_id",nullable = false)
+    @Column(name = "unit_id", nullable = false)
     private Long unitId;
 
-    @Column(name = "province",nullable = false)
+    @Column(name = "province", nullable = false)
     private String province;
 
-    @Column(name = "city",nullable = false)
+    @Column(name = "city", nullable = false)
     private String city;
 
     public AdUnitDistrict(Long unitId, String province, String city) {
@@ -40,8 +40,6 @@ public class AdUnitDistrict {
         this.province = province;
         this.city = city;
     }
-
-
 
 
 }

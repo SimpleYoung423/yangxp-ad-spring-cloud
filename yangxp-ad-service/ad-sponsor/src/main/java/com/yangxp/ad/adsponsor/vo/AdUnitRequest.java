@@ -25,7 +25,7 @@ public class AdUnitRequest {
     private Integer positionType;
     private Long budget;
 
-    public boolean createValidate(){
+    public boolean createValidate() {
 
         return ObjectUtil.isNotNull(planId)
                 && StrUtil.isNotEmpty(unitName)

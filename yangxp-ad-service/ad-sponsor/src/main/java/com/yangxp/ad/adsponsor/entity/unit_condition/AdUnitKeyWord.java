@@ -27,10 +27,10 @@ public class AdUnitKeyWord {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "unit_id",nullable = false)
+    @Column(name = "unit_id", nullable = false)
     private Long unitId;
 
-    @Column(name = "keyword",nullable = false)
+    @Column(name = "keyword", nullable = false)
     private String keyword;
 
 

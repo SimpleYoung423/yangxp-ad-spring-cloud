@@ -1,6 +1,7 @@
 package com.yangxp.ad.adsponsor.dao.unit_condition;
 
 import com.yangxp.ad.adsponsor.dao.AdUnitRepository;
+import com.yangxp.ad.adsponsor.entity.unit_condition.AdUnitDistrict;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -12,5 +13,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Version 1.0
  */
 
-public interface AdUnitDistrictRepository extends JpaRepository<AdUnitRepository,Long> {
+public interface AdUnitDistrictRepository extends JpaRepository<AdUnitDistrict, Long> {
 }

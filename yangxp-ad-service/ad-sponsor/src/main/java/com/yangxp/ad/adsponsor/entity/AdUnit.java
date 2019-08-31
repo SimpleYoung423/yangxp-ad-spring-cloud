@@ -24,29 +24,31 @@ public class AdUnit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",nullable = false)
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "plan_id",nullable = false)
+    @Column(name = "plan_id", nullable = false)
     private Long planId;
 
-    @Column(name = "unit_name",nullable = false)
-    private String  unitName;
+    @Column(name = "unit_name", nullable = false)
+    private String unitName;
 
-    @Column(name = "unit_status",nullable = false)
+    @Column(name = "unit_status", nullable = false)
     private Integer unitStatus;
 
-    /**  广告位类型（开屏、贴片...） */
-    @Column(name = "position_type",nullable = false)
+    /**
+     * 广告位类型（开屏、贴片...）
+     */
+    @Column(name = "position_type", nullable = false)
     private Integer positionType;
 
-    @Column(name = "budget",nullable = false)
+    @Column(name = "budget", nullable = false)
     private Long budget;
 
-    @Column(name = "create_time",nullable = false)
+    @Column(name = "create_time", nullable = false)
     public Date createTime;
 
-    @Column(name = "update_time",nullable = false)
+    @Column(name = "update_time", nullable = false)
     public Date updateTime;
 
     public AdUnit(Long planId, String unitName, Integer positionType, Long budget) {

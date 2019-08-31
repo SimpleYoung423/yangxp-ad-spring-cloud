@@ -1,6 +1,7 @@
 package com.yangxp.ad.adsponsor.service;
 
 import com.yangxp.ad.adcommon.exception.AdException;
+import com.yangxp.ad.adsponsor.entity.unit_condition.CreativeUnit;
 import com.yangxp.ad.adsponsor.vo.*;
 
 /**
@@ -16,21 +17,21 @@ public interface IAdUnitService {
 
 
     /**
+     * @return {@link AdUnitResponse}
      * @Description 创建推广单元
      * @Author yangxp
-     * @Date  2019/8/30 19:21
+     * @Date 2019/8/30 19:21
      * @Param [request]
-     * @return {@link AdUnitResponse}
      **/
     AdUnitResponse createUnit(AdUnitRequest request) throws AdException;
 
 
     /**
+     * @return {@link AdUnitKeywordResponse}
      * @Description 创建推广关键词
      * @Author yangxp
-     * @Date  2019/8/30 19:55
+     * @Date 2019/8/30 19:55
      * @Param [request]
-     * @return {@link AdUnitKeywordResponse}
      **/
     AdUnitKeywordResponse createUnitKeyword(AdUnitKeywordRequest request) throws AdException;
 
@@ -38,5 +39,8 @@ public interface IAdUnitService {
     AdUnitItResponse createUnitIt(AdUnitItRequest request) throws AdException;
 
     AdUnitDistrictResponse createUnitDistrict(AdUnitDistrictRequest request) throws AdException;
+
+
+    CreativeUnitResponse createCreativeUnit(CreativeUnitRequest request) throws AdException;
 
 }

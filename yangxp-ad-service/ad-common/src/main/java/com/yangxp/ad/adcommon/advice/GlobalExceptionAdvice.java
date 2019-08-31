@@ -19,9 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 public class GlobalExceptionAdvice {
 
     @ExceptionHandler(value = AdException.class)
-    public CommonResponse<String> handleAdException(HttpServletRequest request, AdException adException){
+    public CommonResponse<String> handleAdException(HttpServletRequest request, AdException adException) {
 
-        CommonResponse<String> response = new CommonResponse<>(-1,"business");
+        CommonResponse<String> response = new CommonResponse<>(-1, "business");
         response.setData(adException.getMessage());
         return response;
     }

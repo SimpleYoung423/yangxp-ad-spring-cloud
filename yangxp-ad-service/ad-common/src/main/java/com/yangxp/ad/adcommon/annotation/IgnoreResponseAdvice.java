@@ -13,11 +13,9 @@ import java.lang.annotation.Target;
  * @Version 1.0
  */
 
-@Target({ElementType.TYPE,ElementType.METHOD})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface IgnoreResponseAdvice {
-
-
 
 
 }
