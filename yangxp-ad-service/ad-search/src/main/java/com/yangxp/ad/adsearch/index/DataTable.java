@@ -33,7 +33,7 @@ public class DataTable  implements ApplicationContextAware, PriorityOrdered {
 
     }
 
-    public static <T> T of(Class clazz){
+    public static <T> T of(Class<T> clazz){
 
         T instance = (T) dataTableMap.get(clazz);
         if (ObjectUtil.isNotNull(instance)){
@@ -59,5 +59,7 @@ public class DataTable  implements ApplicationContextAware, PriorityOrdered {
     private static <T> T bean(Class clazz){
         return (T) applicationContext.getBean(clazz);
     }
+
+
 
 }
